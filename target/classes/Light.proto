@@ -1,0 +1,52 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "org.DS.garyproject.SmartBuildingGRPC";
+option java_outer_classname = "LightServiceImpl";
+
+package SmartBuildingGRPC;
+
+service LightService {
+  rpc initialDevice(Empty) returns (lightResponse) {}
+  
+  rpc changeBrightness(valueRequest) returns (stream valueResponse) {}
+  
+  rpc onOff(booleanRequest) returns (booleanResponse) {}
+  
+  rpc changeDeviceName(stringRequest) returns (stringResponse) {}
+  
+}
+
+message Empty {
+
+}
+
+message stringRequest {
+	string text = 1;
+}
+
+message stringResponse {
+	string text = 1;
+}
+
+message booleanRequest {
+	bool msg = 2;
+}
+
+message booleanResponse {
+	bool msg = 2;
+}
+
+message valueRequest {
+  int32 length = 3;
+}
+
+message valueResponse {
+  int32 length = 3;
+}
+
+message lightResponse{
+	string dname = 4;
+	string status = 5;
+	int32 brightness = 6;	
+}
