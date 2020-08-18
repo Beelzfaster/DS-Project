@@ -69,19 +69,19 @@ public final class LightServiceImpl {
       "st\022\013\n\003msg\030\002 \001(\010\"\036\n\017booleanResponse\022\013\n\003ms" +
       "g\030\002 \001(\010\"\036\n\014valueRequest\022\016\n\006length\030\003 \001(\005\"" +
       "\037\n\rvalueResponse\022\016\n\006length\030\003 \001(\005\"B\n\rligh" +
-      "tResponse\022\r\n\005dname\030\004 \001(\t\022\016\n\006status\030\005 \001(\t" +
-      "\022\022\n\nbrightness\030\006 \001(\0052\345\002\n\014LightService\022M\n" +
-      "\rinitialDevice\022\030.SmartBuildingGRPC.Empty" +
-      "\032 .SmartBuildingGRPC.lightResponse\"\000\022Y\n\020" +
-      "changeBrightness\022\037.SmartBuildingGRPC.val" +
-      "ueRequest\032 .SmartBuildingGRPC.valueRespo" +
-      "nse\"\0000\001\022P\n\005onOff\022!.SmartBuildingGRPC.boo" +
-      "leanRequest\032\".SmartBuildingGRPC.booleanR" +
-      "esponse\"\000\022Y\n\020changeDeviceName\022 .SmartBui" +
-      "ldingGRPC.stringRequest\032!.SmartBuildingG" +
-      "RPC.stringResponse\"\000B:\n$org.DS.garyproje" +
-      "ct.SmartBuildingGRPCB\020LightServiceImplP\001" +
-      "b\006proto3"
+      "tResponse\022\r\n\005aname\030\004 \001(\t\022\016\n\006status\030\005 \001(\t" +
+      "\022\022\n\nbrightness\030\006 \001(\0052\353\002\n\014LightService\022P\n" +
+      "\020initialAppliance\022\030.SmartBuildingGRPC.Em" +
+      "pty\032 .SmartBuildingGRPC.lightResponse\"\000\022" +
+      "Y\n\020changeBrightness\022\037.SmartBuildingGRPC." +
+      "valueRequest\032 .SmartBuildingGRPC.valueRe" +
+      "sponse\"\0000\001\022P\n\005onOff\022!.SmartBuildingGRPC." +
+      "booleanRequest\032\".SmartBuildingGRPC.boole" +
+      "anResponse\"\000\022\\\n\023changeApplianceName\022 .Sm" +
+      "artBuildingGRPC.stringRequest\032!.SmartBui" +
+      "ldingGRPC.stringResponse\"\000B:\n$org.DS.gar" +
+      "yproject.SmartBuildingGRPCB\020LightService" +
+      "ImplP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -142,7 +142,7 @@ public final class LightServiceImpl {
     internal_static_SmartBuildingGRPC_lightResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_SmartBuildingGRPC_lightResponse_descriptor,
-        new java.lang.String[] { "Dname", "Status", "Brightness", });
+        new java.lang.String[] { "Aname", "Status", "Brightness", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -28,35 +28,35 @@ public final class LightServiceGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<org.DS.garyproject.SmartBuildingGRPC.Empty,
-      org.DS.garyproject.SmartBuildingGRPC.lightResponse> getInitialDeviceMethod;
+      org.DS.garyproject.SmartBuildingGRPC.lightResponse> getInitialApplianceMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "initialDevice",
+      fullMethodName = SERVICE_NAME + '/' + "initialAppliance",
       requestType = org.DS.garyproject.SmartBuildingGRPC.Empty.class,
       responseType = org.DS.garyproject.SmartBuildingGRPC.lightResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<org.DS.garyproject.SmartBuildingGRPC.Empty,
-      org.DS.garyproject.SmartBuildingGRPC.lightResponse> getInitialDeviceMethod() {
-    io.grpc.MethodDescriptor<org.DS.garyproject.SmartBuildingGRPC.Empty, org.DS.garyproject.SmartBuildingGRPC.lightResponse> getInitialDeviceMethod;
-    if ((getInitialDeviceMethod = LightServiceGrpc.getInitialDeviceMethod) == null) {
+      org.DS.garyproject.SmartBuildingGRPC.lightResponse> getInitialApplianceMethod() {
+    io.grpc.MethodDescriptor<org.DS.garyproject.SmartBuildingGRPC.Empty, org.DS.garyproject.SmartBuildingGRPC.lightResponse> getInitialApplianceMethod;
+    if ((getInitialApplianceMethod = LightServiceGrpc.getInitialApplianceMethod) == null) {
       synchronized (LightServiceGrpc.class) {
-        if ((getInitialDeviceMethod = LightServiceGrpc.getInitialDeviceMethod) == null) {
-          LightServiceGrpc.getInitialDeviceMethod = getInitialDeviceMethod = 
+        if ((getInitialApplianceMethod = LightServiceGrpc.getInitialApplianceMethod) == null) {
+          LightServiceGrpc.getInitialApplianceMethod = getInitialApplianceMethod = 
               io.grpc.MethodDescriptor.<org.DS.garyproject.SmartBuildingGRPC.Empty, org.DS.garyproject.SmartBuildingGRPC.lightResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
-                  "SmartBuildingGRPC.LightService", "initialDevice"))
+                  "SmartBuildingGRPC.LightService", "initialAppliance"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.DS.garyproject.SmartBuildingGRPC.Empty.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.DS.garyproject.SmartBuildingGRPC.lightResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new LightServiceMethodDescriptorSupplier("initialDevice"))
+                  .setSchemaDescriptor(new LightServiceMethodDescriptorSupplier("initialAppliance"))
                   .build();
           }
         }
      }
-     return getInitialDeviceMethod;
+     return getInitialApplianceMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<org.DS.garyproject.SmartBuildingGRPC.valueRequest,
@@ -124,35 +124,35 @@ public final class LightServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<org.DS.garyproject.SmartBuildingGRPC.stringRequest,
-      org.DS.garyproject.SmartBuildingGRPC.stringResponse> getChangeDeviceNameMethod;
+      org.DS.garyproject.SmartBuildingGRPC.stringResponse> getChangeApplianceNameMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "changeDeviceName",
+      fullMethodName = SERVICE_NAME + '/' + "changeApplianceName",
       requestType = org.DS.garyproject.SmartBuildingGRPC.stringRequest.class,
       responseType = org.DS.garyproject.SmartBuildingGRPC.stringResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<org.DS.garyproject.SmartBuildingGRPC.stringRequest,
-      org.DS.garyproject.SmartBuildingGRPC.stringResponse> getChangeDeviceNameMethod() {
-    io.grpc.MethodDescriptor<org.DS.garyproject.SmartBuildingGRPC.stringRequest, org.DS.garyproject.SmartBuildingGRPC.stringResponse> getChangeDeviceNameMethod;
-    if ((getChangeDeviceNameMethod = LightServiceGrpc.getChangeDeviceNameMethod) == null) {
+      org.DS.garyproject.SmartBuildingGRPC.stringResponse> getChangeApplianceNameMethod() {
+    io.grpc.MethodDescriptor<org.DS.garyproject.SmartBuildingGRPC.stringRequest, org.DS.garyproject.SmartBuildingGRPC.stringResponse> getChangeApplianceNameMethod;
+    if ((getChangeApplianceNameMethod = LightServiceGrpc.getChangeApplianceNameMethod) == null) {
       synchronized (LightServiceGrpc.class) {
-        if ((getChangeDeviceNameMethod = LightServiceGrpc.getChangeDeviceNameMethod) == null) {
-          LightServiceGrpc.getChangeDeviceNameMethod = getChangeDeviceNameMethod = 
+        if ((getChangeApplianceNameMethod = LightServiceGrpc.getChangeApplianceNameMethod) == null) {
+          LightServiceGrpc.getChangeApplianceNameMethod = getChangeApplianceNameMethod = 
               io.grpc.MethodDescriptor.<org.DS.garyproject.SmartBuildingGRPC.stringRequest, org.DS.garyproject.SmartBuildingGRPC.stringResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
-                  "SmartBuildingGRPC.LightService", "changeDeviceName"))
+                  "SmartBuildingGRPC.LightService", "changeApplianceName"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.DS.garyproject.SmartBuildingGRPC.stringRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.DS.garyproject.SmartBuildingGRPC.stringResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new LightServiceMethodDescriptorSupplier("changeDeviceName"))
+                  .setSchemaDescriptor(new LightServiceMethodDescriptorSupplier("changeApplianceName"))
                   .build();
           }
         }
      }
-     return getChangeDeviceNameMethod;
+     return getChangeApplianceNameMethod;
   }
 
   /**
@@ -184,9 +184,9 @@ public final class LightServiceGrpc {
 
     /**
      */
-    public void initialDevice(org.DS.garyproject.SmartBuildingGRPC.Empty request,
+    public void initialAppliance(org.DS.garyproject.SmartBuildingGRPC.Empty request,
         io.grpc.stub.StreamObserver<org.DS.garyproject.SmartBuildingGRPC.lightResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getInitialDeviceMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getInitialApplianceMethod(), responseObserver);
     }
 
     /**
@@ -205,20 +205,20 @@ public final class LightServiceGrpc {
 
     /**
      */
-    public void changeDeviceName(org.DS.garyproject.SmartBuildingGRPC.stringRequest request,
+    public void changeApplianceName(org.DS.garyproject.SmartBuildingGRPC.stringRequest request,
         io.grpc.stub.StreamObserver<org.DS.garyproject.SmartBuildingGRPC.stringResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getChangeDeviceNameMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getChangeApplianceNameMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getInitialDeviceMethod(),
+            getInitialApplianceMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 org.DS.garyproject.SmartBuildingGRPC.Empty,
                 org.DS.garyproject.SmartBuildingGRPC.lightResponse>(
-                  this, METHODID_INITIAL_DEVICE)))
+                  this, METHODID_INITIAL_APPLIANCE)))
           .addMethod(
             getChangeBrightnessMethod(),
             asyncServerStreamingCall(
@@ -234,12 +234,12 @@ public final class LightServiceGrpc {
                 org.DS.garyproject.SmartBuildingGRPC.booleanResponse>(
                   this, METHODID_ON_OFF)))
           .addMethod(
-            getChangeDeviceNameMethod(),
+            getChangeApplianceNameMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 org.DS.garyproject.SmartBuildingGRPC.stringRequest,
                 org.DS.garyproject.SmartBuildingGRPC.stringResponse>(
-                  this, METHODID_CHANGE_DEVICE_NAME)))
+                  this, METHODID_CHANGE_APPLIANCE_NAME)))
           .build();
     }
   }
@@ -264,10 +264,10 @@ public final class LightServiceGrpc {
 
     /**
      */
-    public void initialDevice(org.DS.garyproject.SmartBuildingGRPC.Empty request,
+    public void initialAppliance(org.DS.garyproject.SmartBuildingGRPC.Empty request,
         io.grpc.stub.StreamObserver<org.DS.garyproject.SmartBuildingGRPC.lightResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getInitialDeviceMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getInitialApplianceMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -288,10 +288,10 @@ public final class LightServiceGrpc {
 
     /**
      */
-    public void changeDeviceName(org.DS.garyproject.SmartBuildingGRPC.stringRequest request,
+    public void changeApplianceName(org.DS.garyproject.SmartBuildingGRPC.stringRequest request,
         io.grpc.stub.StreamObserver<org.DS.garyproject.SmartBuildingGRPC.stringResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getChangeDeviceNameMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getChangeApplianceNameMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -315,9 +315,9 @@ public final class LightServiceGrpc {
 
     /**
      */
-    public org.DS.garyproject.SmartBuildingGRPC.lightResponse initialDevice(org.DS.garyproject.SmartBuildingGRPC.Empty request) {
+    public org.DS.garyproject.SmartBuildingGRPC.lightResponse initialAppliance(org.DS.garyproject.SmartBuildingGRPC.Empty request) {
       return blockingUnaryCall(
-          getChannel(), getInitialDeviceMethod(), getCallOptions(), request);
+          getChannel(), getInitialApplianceMethod(), getCallOptions(), request);
     }
 
     /**
@@ -337,9 +337,9 @@ public final class LightServiceGrpc {
 
     /**
      */
-    public org.DS.garyproject.SmartBuildingGRPC.stringResponse changeDeviceName(org.DS.garyproject.SmartBuildingGRPC.stringRequest request) {
+    public org.DS.garyproject.SmartBuildingGRPC.stringResponse changeApplianceName(org.DS.garyproject.SmartBuildingGRPC.stringRequest request) {
       return blockingUnaryCall(
-          getChannel(), getChangeDeviceNameMethod(), getCallOptions(), request);
+          getChannel(), getChangeApplianceNameMethod(), getCallOptions(), request);
     }
   }
 
@@ -363,10 +363,10 @@ public final class LightServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<org.DS.garyproject.SmartBuildingGRPC.lightResponse> initialDevice(
+    public com.google.common.util.concurrent.ListenableFuture<org.DS.garyproject.SmartBuildingGRPC.lightResponse> initialAppliance(
         org.DS.garyproject.SmartBuildingGRPC.Empty request) {
       return futureUnaryCall(
-          getChannel().newCall(getInitialDeviceMethod(), getCallOptions()), request);
+          getChannel().newCall(getInitialApplianceMethod(), getCallOptions()), request);
     }
 
     /**
@@ -379,17 +379,17 @@ public final class LightServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<org.DS.garyproject.SmartBuildingGRPC.stringResponse> changeDeviceName(
+    public com.google.common.util.concurrent.ListenableFuture<org.DS.garyproject.SmartBuildingGRPC.stringResponse> changeApplianceName(
         org.DS.garyproject.SmartBuildingGRPC.stringRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getChangeDeviceNameMethod(), getCallOptions()), request);
+          getChannel().newCall(getChangeApplianceNameMethod(), getCallOptions()), request);
     }
   }
 
-  private static final int METHODID_INITIAL_DEVICE = 0;
+  private static final int METHODID_INITIAL_APPLIANCE = 0;
   private static final int METHODID_CHANGE_BRIGHTNESS = 1;
   private static final int METHODID_ON_OFF = 2;
-  private static final int METHODID_CHANGE_DEVICE_NAME = 3;
+  private static final int METHODID_CHANGE_APPLIANCE_NAME = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -408,8 +408,8 @@ public final class LightServiceGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_INITIAL_DEVICE:
-          serviceImpl.initialDevice((org.DS.garyproject.SmartBuildingGRPC.Empty) request,
+        case METHODID_INITIAL_APPLIANCE:
+          serviceImpl.initialAppliance((org.DS.garyproject.SmartBuildingGRPC.Empty) request,
               (io.grpc.stub.StreamObserver<org.DS.garyproject.SmartBuildingGRPC.lightResponse>) responseObserver);
           break;
         case METHODID_CHANGE_BRIGHTNESS:
@@ -420,8 +420,8 @@ public final class LightServiceGrpc {
           serviceImpl.onOff((org.DS.garyproject.SmartBuildingGRPC.booleanRequest) request,
               (io.grpc.stub.StreamObserver<org.DS.garyproject.SmartBuildingGRPC.booleanResponse>) responseObserver);
           break;
-        case METHODID_CHANGE_DEVICE_NAME:
-          serviceImpl.changeDeviceName((org.DS.garyproject.SmartBuildingGRPC.stringRequest) request,
+        case METHODID_CHANGE_APPLIANCE_NAME:
+          serviceImpl.changeApplianceName((org.DS.garyproject.SmartBuildingGRPC.stringRequest) request,
               (io.grpc.stub.StreamObserver<org.DS.garyproject.SmartBuildingGRPC.stringResponse>) responseObserver);
           break;
         default:
@@ -485,10 +485,10 @@ public final class LightServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new LightServiceFileDescriptorSupplier())
-              .addMethod(getInitialDeviceMethod())
+              .addMethod(getInitialApplianceMethod())
               .addMethod(getChangeBrightnessMethod())
               .addMethod(getOnOffMethod())
-              .addMethod(getChangeDeviceNameMethod())
+              .addMethod(getChangeApplianceNameMethod())
               .build();
         }
       }

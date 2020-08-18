@@ -8,14 +8,14 @@ public interface lightResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string dname = 4;</code>
+   * <code>string aname = 4;</code>
    */
-  java.lang.String getDname();
+  java.lang.String getAname();
   /**
-   * <code>string dname = 4;</code>
+   * <code>string aname = 4;</code>
    */
   com.google.protobuf.ByteString
-      getDnameBytes();
+      getAnameBytes();
 
   /**
    * <code>string status = 5;</code>
