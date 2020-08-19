@@ -16,8 +16,6 @@ service ProjectorService {
   rpc onOff(booleanRequest) returns (booleanResponse) {}
   
   rpc changeApplianceName(stringRequest) returns (stringResponse) {}	
-  
-  rpc changeApplianceNameStream(stream stringRequest) returns (stream stringResponse) {}
 
 }
 

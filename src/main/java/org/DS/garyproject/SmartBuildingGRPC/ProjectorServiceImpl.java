@@ -71,7 +71,7 @@ public final class ProjectorServiceImpl {
       "\001(\005\"\037\n\rvalueResponse\022\016\n\006length\030\003 \001(\005\"S\n\021" +
       "projectorResponse\022\r\n\005aname\030\004 \001(\t\022\016\n\006stat" +
       "us\030\005 \001(\t\022\016\n\006volume\030\006 \001(\005\022\017\n\007channel\030\007 \001(" +
-      "\0052\257\004\n\020ProjectorService\022T\n\020initialApplian" +
+      "\0052\307\003\n\020ProjectorService\022T\n\020initialApplian" +
       "ce\022\030.SmartBuildingGRPC.Empty\032$.SmartBuil" +
       "dingGRPC.projectorResponse\"\000\022U\n\014changeVo" +
       "lume\022\037.SmartBuildingGRPC.valueRequest\032 ." +
@@ -82,11 +82,9 @@ public final class ProjectorServiceImpl {
       "Request\032\".SmartBuildingGRPC.booleanRespo" +
       "nse\"\000\022\\\n\023changeApplianceName\022 .SmartBuil" +
       "dingGRPC.stringRequest\032!.SmartBuildingGR" +
-      "PC.stringResponse\"\000\022f\n\031changeApplianceNa" +
-      "meStream\022 .SmartBuildingGRPC.stringReque" +
-      "st\032!.SmartBuildingGRPC.stringResponse\"\000(" +
-      "\0010\001B>\n$org.DS.garyproject.SmartBuildingG" +
-      "RPCB\024ProjectorServiceImplP\001b\006proto3"
+      "PC.stringResponse\"\000B>\n$org.DS.garyprojec" +
+      "t.SmartBuildingGRPCB\024ProjectorServiceImp" +
+      "lP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

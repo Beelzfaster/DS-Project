@@ -187,38 +187,6 @@ public final class ProjectorServiceGrpc {
      return getChangeApplianceNameMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<org.DS.garyproject.SmartBuildingGRPC.stringRequest,
-      org.DS.garyproject.SmartBuildingGRPC.stringResponse> getChangeApplianceNameStreamMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "changeApplianceNameStream",
-      requestType = org.DS.garyproject.SmartBuildingGRPC.stringRequest.class,
-      responseType = org.DS.garyproject.SmartBuildingGRPC.stringResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
-  public static io.grpc.MethodDescriptor<org.DS.garyproject.SmartBuildingGRPC.stringRequest,
-      org.DS.garyproject.SmartBuildingGRPC.stringResponse> getChangeApplianceNameStreamMethod() {
-    io.grpc.MethodDescriptor<org.DS.garyproject.SmartBuildingGRPC.stringRequest, org.DS.garyproject.SmartBuildingGRPC.stringResponse> getChangeApplianceNameStreamMethod;
-    if ((getChangeApplianceNameStreamMethod = ProjectorServiceGrpc.getChangeApplianceNameStreamMethod) == null) {
-      synchronized (ProjectorServiceGrpc.class) {
-        if ((getChangeApplianceNameStreamMethod = ProjectorServiceGrpc.getChangeApplianceNameStreamMethod) == null) {
-          ProjectorServiceGrpc.getChangeApplianceNameStreamMethod = getChangeApplianceNameStreamMethod = 
-              io.grpc.MethodDescriptor.<org.DS.garyproject.SmartBuildingGRPC.stringRequest, org.DS.garyproject.SmartBuildingGRPC.stringResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "SmartBuildingGRPC.ProjectorService", "changeApplianceNameStream"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  org.DS.garyproject.SmartBuildingGRPC.stringRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  org.DS.garyproject.SmartBuildingGRPC.stringResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ProjectorServiceMethodDescriptorSupplier("changeApplianceNameStream"))
-                  .build();
-          }
-        }
-     }
-     return getChangeApplianceNameStreamMethod;
-  }
-
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -281,13 +249,6 @@ public final class ProjectorServiceGrpc {
       asyncUnimplementedUnaryCall(getChangeApplianceNameMethod(), responseObserver);
     }
 
-    /**
-     */
-    public io.grpc.stub.StreamObserver<org.DS.garyproject.SmartBuildingGRPC.stringRequest> changeApplianceNameStream(
-        io.grpc.stub.StreamObserver<org.DS.garyproject.SmartBuildingGRPC.stringResponse> responseObserver) {
-      return asyncUnimplementedStreamingCall(getChangeApplianceNameStreamMethod(), responseObserver);
-    }
-
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -325,13 +286,6 @@ public final class ProjectorServiceGrpc {
                 org.DS.garyproject.SmartBuildingGRPC.stringRequest,
                 org.DS.garyproject.SmartBuildingGRPC.stringResponse>(
                   this, METHODID_CHANGE_APPLIANCE_NAME)))
-          .addMethod(
-            getChangeApplianceNameStreamMethod(),
-            asyncBidiStreamingCall(
-              new MethodHandlers<
-                org.DS.garyproject.SmartBuildingGRPC.stringRequest,
-                org.DS.garyproject.SmartBuildingGRPC.stringResponse>(
-                  this, METHODID_CHANGE_APPLIANCE_NAME_STREAM)))
           .build();
     }
   }
@@ -392,14 +346,6 @@ public final class ProjectorServiceGrpc {
         io.grpc.stub.StreamObserver<org.DS.garyproject.SmartBuildingGRPC.stringResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getChangeApplianceNameMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     */
-    public io.grpc.stub.StreamObserver<org.DS.garyproject.SmartBuildingGRPC.stringRequest> changeApplianceNameStream(
-        io.grpc.stub.StreamObserver<org.DS.garyproject.SmartBuildingGRPC.stringResponse> responseObserver) {
-      return asyncBidiStreamingCall(
-          getChannel().newCall(getChangeApplianceNameStreamMethod(), getCallOptions()), responseObserver);
     }
   }
 
@@ -507,7 +453,6 @@ public final class ProjectorServiceGrpc {
   private static final int METHODID_CHANGE_CHANNEL = 2;
   private static final int METHODID_ON_OFF = 3;
   private static final int METHODID_CHANGE_APPLIANCE_NAME = 4;
-  private static final int METHODID_CHANGE_APPLIANCE_NAME_STREAM = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -556,9 +501,6 @@ public final class ProjectorServiceGrpc {
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_CHANGE_APPLIANCE_NAME_STREAM:
-          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.changeApplianceNameStream(
-              (io.grpc.stub.StreamObserver<org.DS.garyproject.SmartBuildingGRPC.stringResponse>) responseObserver);
         default:
           throw new AssertionError();
       }
@@ -615,7 +557,6 @@ public final class ProjectorServiceGrpc {
               .addMethod(getChangeChannelMethod())
               .addMethod(getOnOffMethod())
               .addMethod(getChangeApplianceNameMethod())
-              .addMethod(getChangeApplianceNameStreamMethod())
               .build();
         }
       }

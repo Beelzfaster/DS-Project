@@ -9,6 +9,7 @@ org\DS\garyproject\SmartBuildingGRPC\HeatingServiceGrpc$HeatingServiceImplBase.c
 org\DS\garyproject\SmartBuildingGRPC\HeatingServiceGrpc.class
 org\DS\garyproject\SmartBuildingGRPC\HeatingServiceGrpc$HeatingServiceFileDescriptorSupplier.class
 org\DS\garyproject\SmartBuildingGRPC\HeatingServiceGrpc$MethodHandlers.class
+GRPC\HeatingServer.class
 org\DS\garyproject\SmartBuildingGRPC\LightServiceGrpc.class
 org\DS\garyproject\SmartBuildingGRPC\booleanRequest.class
 org\DS\garyproject\SmartBuildingGRPC\ProjectorServiceGrpc$ProjectorServiceStub.class
@@ -24,11 +25,13 @@ org\DS\garyproject\SmartBuildingGRPC\heatingResponse$1.class
 org\DS\garyproject\SmartBuildingGRPC\ProjectorServiceGrpc$ProjectorServiceFileDescriptorSupplier.class
 org\DS\garyproject\SmartBuildingGRPC\valueResponse$Builder.class
 org\DS\garyproject\SmartBuildingGRPC\LightServiceGrpc$LightServiceBlockingStub.class
+GRPC\HeatingServer$1.class
 org\DS\garyproject\SmartBuildingGRPC\ProjectorServiceGrpc$ProjectorServiceBaseDescriptorSupplier.class
 org\DS\garyproject\SmartBuildingGRPC\valueResponse$1.class
 org\DS\garyproject\SmartBuildingGRPC\projectorResponseOrBuilder.class
 org\DS\garyproject\SmartBuildingGRPC\LightServiceGrpc$LightServiceMethodDescriptorSupplier.class
 org\DS\garyproject\SmartBuildingGRPC\HeatingServiceGrpc$HeatingServiceMethodDescriptorSupplier.class
+Models\Projector.class
 org\DS\garyproject\SmartBuildingGRPC\Empty.class
 org\DS\garyproject\SmartBuildingGRPC\ProjectorServiceGrpc$ProjectorServiceBlockingStub.class
 org\DS\garyproject\SmartBuildingGRPC\ProjectorServiceImpl$1.class
@@ -50,6 +53,7 @@ org\DS\garyproject\SmartBuildingGRPC\valueRequest$1.class
 org\DS\garyproject\SmartBuildingGRPC\valueRequest.class
 org\DS\garyproject\SmartBuildingGRPC\stringRequest.class
 org\DS\garyproject\SmartBuildingGRPC\ProjectorServiceGrpc$ProjectorServiceImplBase.class
+GRPC\ProjectorServer.class
 org\DS\garyproject\SmartBuildingGRPC\stringRequest$1.class
 org\DS\garyproject\SmartBuildingGRPC\heatingResponseOrBuilder.class
 org\DS\garyproject\SmartBuildingGRPC\stringRequestOrBuilder.class
@@ -58,6 +62,7 @@ org\DS\garyproject\SmartBuildingGRPC\lightResponse$1.class
 org\DS\garyproject\SmartBuildingGRPC\EmptyOrBuilder.class
 org\DS\garyproject\SmartBuildingGRPC\stringResponse.class
 org\DS\garyproject\SmartBuildingGRPC\LightServiceGrpc$LightServiceFileDescriptorSupplier.class
+Models\Heating.class
 org\DS\garyproject\SmartBuildingGRPC\booleanResponse$Builder.class
 org\DS\garyproject\SmartBuildingGRPC\ProjectorServiceGrpc$ProjectorServiceMethodDescriptorSupplier.class
 org\DS\garyproject\SmartBuildingGRPC\booleanResponse$1.class

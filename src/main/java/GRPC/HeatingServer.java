@@ -83,7 +83,7 @@ public class HeatingServer extends HeatingServiceImplBase{
 		int speed = request.getLength();
 		int newSpeed = currentSpeed + speed;
 		
-		System.out.println("Receiving new fan speed for Heating: " + speed);
+		System.out.println("Receiving fan speed for Heating: " + speed);
 		if(newSpeed <= 10 && newSpeed >= 1) {
 			myHeating.setSpeed(newSpeed);
 		}
@@ -113,7 +113,7 @@ public class HeatingServer extends HeatingServiceImplBase{
 	public void changeApplianceName(stringRequest request, StreamObserver<stringResponse> responseObserver) {
 		// TODO Auto-generated method stub
 		String name = request.getText();
-		System.out.println("Changing lamp name to "+name);
+		System.out.println("Changing projector name to "+name);
 
 		myHeating.setApplianceName(name);
 		 
