@@ -1,10 +1,14 @@
 C:\Users\Beelz\Desktop\DS-Project\src\main\java\org\DS\garyproject\SmartBuildingGRPC\stringRequestOrBuilder.java
 C:\Users\Beelz\Desktop\DS-Project\src\main\java\org\DS\garyproject\SmartBuildingGRPC\valueRequest.java
 C:\Users\Beelz\Desktop\DS-Project\src\main\java\org\DS\garyproject\SmartBuildingGRPC\booleanResponseOrBuilder.java
+C:\Users\Beelz\Desktop\DS-Project\src\main\java\org\DS\garyproject\SmartBuildingGRPC\SecuritycameraServiceImpl.java
+C:\Users\Beelz\Desktop\DS-Project\src\main\java\SmartBuildingGRPC\Securitycamera.java
 C:\Users\Beelz\Desktop\DS-Project\src\main\java\org\DS\garyproject\SmartBuildingGRPC\stringResponseOrBuilder.java
 C:\Users\Beelz\Desktop\DS-Project\src\main\java\org\DS\garyproject\SmartBuildingGRPC\HeatingServiceImpl.java
+C:\Users\Beelz\Desktop\DS-Project\src\main\java\GUI\Main.java
 C:\Users\Beelz\Desktop\DS-Project\src\main\java\org\DS\garyproject\SmartBuildingGRPC\stringResponse.java
 C:\Users\Beelz\Desktop\DS-Project\src\main\java\org\DS\garyproject\SmartBuildingGRPC\booleanRequest.java
+C:\Users\Beelz\Desktop\DS-Project\src\main\java\org\DS\garyproject\SmartBuildingGRPC\SecuritycameraServiceGrpc.java
 C:\Users\Beelz\Desktop\DS-Project\src\main\java\org\DS\garyproject\SmartBuildingGRPC\LightServiceImpl.java
 C:\Users\Beelz\Desktop\DS-Project\src\main\java\org\DS\garyproject\SmartBuildingGRPC\booleanRequestOrBuilder.java
 C:\Users\Beelz\Desktop\DS-Project\src\main\java\org\DS\garyproject\SmartBuildingGRPC\EmptyOrBuilder.java
@@ -25,6 +29,8 @@ C:\Users\Beelz\Desktop\DS-Project\src\main\java\GRPC\ProjectorServer.java
 C:\Users\Beelz\Desktop\DS-Project\src\main\java\org\DS\garyproject\SmartBuildingGRPC\Empty.java
 C:\Users\Beelz\Desktop\DS-Project\src\main\java\org\DS\garyproject\SmartBuildingGRPC\heatingResponse.java
 C:\Users\Beelz\Desktop\DS-Project\src\main\java\js\Json.java
+C:\Users\Beelz\Desktop\DS-Project\src\main\java\org\DS\garyproject\SmartBuildingGRPC\cameraResponseOrBuilder.java
+C:\Users\Beelz\Desktop\DS-Project\src\main\java\SmartBuildingGRPC\SecuritycameraServiceGrpc.java
 C:\Users\Beelz\Desktop\DS-Project\src\main\java\Models\Heating.java
 C:\Users\Beelz\Desktop\DS-Project\src\main\java\org\DS\garyproject\SmartBuildingGRPC\lightResponse.java
 C:\Users\Beelz\Desktop\DS-Project\src\main\java\org\DS\garyproject\SmartBuildingGRPC\ProjectorServiceImpl.java
@@ -35,3 +41,4 @@ C:\Users\Beelz\Desktop\DS-Project\src\main\java\org\DS\garyproject\SmartBuilding
 C:\Users\Beelz\Desktop\DS-Project\src\main\java\GRPC\HeatingServer.java
 C:\Users\Beelz\Desktop\DS-Project\src\main\java\org\DS\garyproject\SmartBuildingGRPC\valueResponseOrBuilder.java
 C:\Users\Beelz\Desktop\DS-Project\src\main\java\org\DS\garyproject\SmartBuildingGRPC\booleanResponse.java
+C:\Users\Beelz\Desktop\DS-Project\src\main\java\org\DS\garyproject\SmartBuildingGRPC\cameraResponse.java

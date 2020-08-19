@@ -15,6 +15,17 @@ import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
+import org.DS.garyproject.SmartBuildingGRPC.Empty;
+import org.DS.garyproject.SmartBuildingGRPC.booleanRequest;
+import org.DS.garyproject.SmartBuildingGRPC.booleanResponse;
+import org.DS.garyproject.SmartBuildingGRPC.cameraResponse;
+import org.DS.garyproject.SmartBuildingGRPC.stringRequest;
+import org.DS.garyproject.SmartBuildingGRPC.stringResponse;
+import org.DS.garyproject.SmartBuildingGRPC.valueRequest;
+import org.DS.garyproject.SmartBuildingGRPC.valueResponse;
+
+import io.grpc.stub.StreamObserver;
+
 /**
  */
 @javax.annotation.Generated(
@@ -347,6 +358,16 @@ public final class SecuritycameraServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getChangeApplianceNameMethod(), getCallOptions()), request, responseObserver);
     }
+
+	public void changeVolume(valueRequest req, StreamObserver<valueResponse> response) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void changeCamera(stringRequest req, StreamObserver<stringResponse> response) {
+		// TODO Auto-generated method stub
+		
+	}
   }
 
   /**
@@ -403,6 +424,16 @@ public final class SecuritycameraServiceGrpc {
       return blockingUnaryCall(
           getChannel(), getChangeApplianceNameMethod(), getCallOptions(), request);
     }
+
+	public cameraResponse initialAppliance(Empty req) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public booleanResponse onOff(booleanRequest req) {
+		// TODO Auto-generated method stub
+		return null;
+	}
   }
 
   /**

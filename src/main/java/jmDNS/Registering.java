@@ -18,7 +18,7 @@ public class Registering {
 
     }
 	
-	public void jmndsRegister(int heatingPort, int projectorPort, int lightPort) throws InterruptedException {
+	public void jmndsRegister(int heatingPort, int projectorPort, int lightPort, int camPort) throws InterruptedException {
 
     	Heating myHeating = new Heating();
     	Projector myProjector = new Projector();

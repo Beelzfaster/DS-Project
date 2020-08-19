@@ -139,22 +139,19 @@ public class LightServer extends LightServiceImplBase{
 		int currentBrightness= myLight.getBrightness();
 		int changeBrightness = request.getLength();
 		
-		System.out.println("Receiving new brightness for lights");
+		System.out.println("Receiving new brightness for lights" + currentBrightness);
 		int newBrightness = currentBrightness + changeBrightness;
 		if(newBrightness > 100 || newBrightness < 0 ) {//start if
 			System.out.println("Brightness cannot exceed 100 or be less than 0: " + newBrightness);
 			System.out.println("The current brightness is set to: " + myLight.getBrightness());
 			
-			//print out
 			valueResponse response = valueResponse.newBuilder().setLength(myLight.getBrightness()).build();
 			responseObserver.onNext(response);
 			responseObserver.onCompleted();
 		}//end if
 		else {//start else
-			System.out.println("The updated brightness level is: " + newBrightness);
 			myLight.setBrightness(newBrightness);
-			
-			//print out
+			System.out.println("The updated brightness level is: " + newBrightness);		
 			valueResponse response = valueResponse.newBuilder().setLength(newBrightness).build();
 			responseObserver.onNext(response);
 			responseObserver.onCompleted();

@@ -128,44 +128,52 @@ public class ProjectorServer extends ProjectorServiceImplBase{
 	@Override
 	public void changeVolume(valueRequest request, StreamObserver<valueResponse> responseObserver) {
 		// TODO Auto-generated method stub
-		int currentVolume = myProjector.getVolume();
-		int volume = request.getLength();
-		int newVolume = currentVolume + volume;
+		int currentVolume= myProjector.getVolume();
+		int changeVolume = request.getLength();
 		
-		System.out.println("Receiving volume for Projector: " + volume);
-		
-		if(newVolume <= 100 && newVolume >= 0) {
+		System.out.println("Receiving new volume for projector" + currentVolume);
+		int newVolume= currentVolume + changeVolume;
+		if(newVolume > 100 || newVolume < 0 ) {//start if
+			System.out.println("Volume cannot exceed 100 or be less than 0: " + newVolume);
+			System.out.println("The current volume is set to: " + myProjector.getVolume());
+			
+			valueResponse response = valueResponse.newBuilder().setLength(myProjector.getVolume()).build();
+			responseObserver.onNext(response);
+			responseObserver.onCompleted();
+		}//end if
+		else {//start else
 			myProjector.setVolume(newVolume);
-			valueResponse response = valueResponse.newBuilder().setLength(myProjector.getVolume()).build();
-			
+			System.out.println("The updated volume level is: " + newVolume);		
+			valueResponse response = valueResponse.newBuilder().setLength(newVolume).build();
 			responseObserver.onNext(response);
 			responseObserver.onCompleted();
-		}
-		else {
-			valueResponse response = valueResponse.newBuilder().setLength(myProjector.getVolume()).build();
-			
-			responseObserver.onNext(response);
-			responseObserver.onCompleted();
-		}
+		}//end else
 		
 	}
 
 	@Override
 	public void changeChannel(valueRequest request, StreamObserver<valueResponse> responseObserver) {
 		// TODO Auto-generated method stub
-		int currentChannel = myProjector.getChannel();
-		int channel = request.getLength();
-		int newChannel = currentChannel + channel;
+		int currentChannel= myProjector.getChannel();
+		int changeChannel = request.getLength();
 		
-		if(newChannel <= 30 && newChannel >= 1) {
-			myProjector.setChannel(newChannel);
-		}
-		else {
-			valueResponse response = valueResponse.newBuilder().setLength(myProjector.getChannel()).build();
+		System.out.println("Receiving new channel for projector" + currentChannel);
+		int newChannel= currentChannel + changeChannel;
+		if(newChannel > 80 || newChannel < 1 ) {//start if
+			System.out.println("Channel cannot exceed 80 or be less than 1: " + newChannel);
+			System.out.println("The current channel is set to: " + myProjector.getChannel());
 			
+			valueResponse response = valueResponse.newBuilder().setLength(myProjector.getChannel()).build();
 			responseObserver.onNext(response);
 			responseObserver.onCompleted();
-		}
+		}//end if
+		else {//start else
+			myProjector.setChannel(newChannel);
+			System.out.println("The updated channel is: " + newChannel);		
+			valueResponse response = valueResponse.newBuilder().setLength(newChannel).build();
+			responseObserver.onNext(response);
+			responseObserver.onCompleted();
+		}//end else
 		
 	}
 

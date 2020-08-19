@@ -49,7 +49,7 @@ public class Discovering {
             jmdns.addServiceListener("_http._tcp.local.", new SampleListener());
             System.out.println("Listening");
             // Wait a bit
-            Thread.sleep(30000);
+            Thread.sleep(3000);
         } 
         catch (UnknownHostException e) {
             System.out.println(e.getMessage());
