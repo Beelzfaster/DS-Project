@@ -13,7 +13,7 @@ var server = new grpc.Server();
 server.bind("0.0.0.0:1237", grpc.ServerCredentials.createInsecure());
 console.log("Server running at http://0.0.0.0:1237");
 
-server.addService(camProto.SmartBuildingGRPC.SecuritycameraService.service, {
+server.addService(camProto.org.DS.garyproject.SmartBuildingGRPC.SecuritycameraService.service, {
     initialAppliance: function (call, callback) {
         callback(null, camAppliance);
     },

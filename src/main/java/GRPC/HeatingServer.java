@@ -128,23 +128,25 @@ public class HeatingServer extends HeatingServiceImplBase{
 	public void changeTemperature(valueRequest request, StreamObserver<valueResponse> responseObserver) {
 		// TODO Auto-generated method stub
 		int currentTemperature = myHeating.getTemperature();
-		int temperature = request.getLength();
-		int newTemperature = currentTemperature + temperature;
+		int changeTemperature = request.getLength();
 		
-		System.out.println("Receiving new temperature for Heating: " + temperature);
-		if(newTemperature<=35 && newTemperature >= 0) {
+		System.out.println("Receiving new temperature for heating " + currentTemperature);
+		int newTemperature = currentTemperature + changeTemperature;
+		if(newTemperature > 40 || newTemperature < 0 ) {//start if
+			System.out.println("Temperature cannot exceed 40 or be less than 0: " + newTemperature);
+			System.out.println("The current Temperature is set to: " + myHeating.getTemperature());
+			
+			valueResponse response = valueResponse.newBuilder().setLength(myHeating.getTemperature()).build();
+			responseObserver.onNext(response);
+			responseObserver.onCompleted();
+		}//end if
+		else {//start else
 			myHeating.setTemperature(newTemperature);
-			valueResponse response = valueResponse.newBuilder().setLength(myHeating.getTemperature()).build();
-			
+			System.out.println("The updated temperature is: " + newTemperature);		
+			valueResponse response = valueResponse.newBuilder().setLength(newTemperature).build();
 			responseObserver.onNext(response);
 			responseObserver.onCompleted();
-		}
-		else {
-			valueResponse response = valueResponse.newBuilder().setLength(myHeating.getTemperature()).build();
-			
-			responseObserver.onNext(response);
-			responseObserver.onCompleted();
-		}
+		}//end else
 		
 	}
 
@@ -152,19 +154,25 @@ public class HeatingServer extends HeatingServiceImplBase{
 	public void changeSpeed(valueRequest request, StreamObserver<valueResponse> responseObserver) {
 		// TODO Auto-generated method stub
 		int currentSpeed = myHeating.getSpeed();
-		int speed = request.getLength();
-		int newSpeed = currentSpeed + speed;
+		int changeSpeed = request.getLength();
 		
-		System.out.println("Receiving fan speed for Heating: " + speed);
-		if(newSpeed <= 10 && newSpeed >= 1) {
-			myHeating.setSpeed(newSpeed);
-		}
-		else {
-			valueResponse response = valueResponse.newBuilder().setLength(myHeating.getSpeed()).build();
+		System.out.println("Receiving new fan speed for heating " + currentSpeed);
+		int newSpeed = currentSpeed + changeSpeed;
+		if(newSpeed > 10 || newSpeed < 0 ) {//start if
+			System.out.println("Speed cannot exceed 10 or be less than 0: " + newSpeed);
+			System.out.println("The current speed is set to: " + myHeating.getSpeed());
 			
+			valueResponse response = valueResponse.newBuilder().setLength(myHeating.getSpeed()).build();
 			responseObserver.onNext(response);
 			responseObserver.onCompleted();
-		}
+		}//end if
+		else {//start else
+			myHeating.setSpeed(newSpeed);
+			System.out.println("The updated fan speed is: " + newSpeed);		
+			valueResponse response = valueResponse.newBuilder().setLength(newSpeed).build();
+			responseObserver.onNext(response);
+			responseObserver.onCompleted();
+		}//end else
 		
 	}
 

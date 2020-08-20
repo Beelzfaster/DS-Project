@@ -59,30 +59,30 @@ public final class SecuritycameraServiceGrpc {
      return getInitialApplianceMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<org.DS.garyproject.SmartBuildingGRPC.valueRequest,
-      org.DS.garyproject.SmartBuildingGRPC.valueResponse> getChangeCameraMethod;
+  private static volatile io.grpc.MethodDescriptor<org.DS.garyproject.SmartBuildingGRPC.stringRequest,
+      org.DS.garyproject.SmartBuildingGRPC.stringResponse> getChangeCameraMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "changeCamera",
-      requestType = org.DS.garyproject.SmartBuildingGRPC.valueRequest.class,
-      responseType = org.DS.garyproject.SmartBuildingGRPC.valueResponse.class,
+      requestType = org.DS.garyproject.SmartBuildingGRPC.stringRequest.class,
+      responseType = org.DS.garyproject.SmartBuildingGRPC.stringResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-  public static io.grpc.MethodDescriptor<org.DS.garyproject.SmartBuildingGRPC.valueRequest,
-      org.DS.garyproject.SmartBuildingGRPC.valueResponse> getChangeCameraMethod() {
-    io.grpc.MethodDescriptor<org.DS.garyproject.SmartBuildingGRPC.valueRequest, org.DS.garyproject.SmartBuildingGRPC.valueResponse> getChangeCameraMethod;
+  public static io.grpc.MethodDescriptor<org.DS.garyproject.SmartBuildingGRPC.stringRequest,
+      org.DS.garyproject.SmartBuildingGRPC.stringResponse> getChangeCameraMethod() {
+    io.grpc.MethodDescriptor<org.DS.garyproject.SmartBuildingGRPC.stringRequest, org.DS.garyproject.SmartBuildingGRPC.stringResponse> getChangeCameraMethod;
     if ((getChangeCameraMethod = SecuritycameraServiceGrpc.getChangeCameraMethod) == null) {
       synchronized (SecuritycameraServiceGrpc.class) {
         if ((getChangeCameraMethod = SecuritycameraServiceGrpc.getChangeCameraMethod) == null) {
           SecuritycameraServiceGrpc.getChangeCameraMethod = getChangeCameraMethod = 
-              io.grpc.MethodDescriptor.<org.DS.garyproject.SmartBuildingGRPC.valueRequest, org.DS.garyproject.SmartBuildingGRPC.valueResponse>newBuilder()
+              io.grpc.MethodDescriptor.<org.DS.garyproject.SmartBuildingGRPC.stringRequest, org.DS.garyproject.SmartBuildingGRPC.stringResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
               .setFullMethodName(generateFullMethodName(
                   "SmartBuildingGRPC.SecuritycameraService", "changeCamera"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  org.DS.garyproject.SmartBuildingGRPC.valueRequest.getDefaultInstance()))
+                  org.DS.garyproject.SmartBuildingGRPC.stringRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  org.DS.garyproject.SmartBuildingGRPC.valueResponse.getDefaultInstance()))
+                  org.DS.garyproject.SmartBuildingGRPC.stringResponse.getDefaultInstance()))
                   .setSchemaDescriptor(new SecuritycameraServiceMethodDescriptorSupplier("changeCamera"))
                   .build();
           }
@@ -223,8 +223,8 @@ public final class SecuritycameraServiceGrpc {
 
     /**
      */
-    public void changeCamera(org.DS.garyproject.SmartBuildingGRPC.valueRequest request,
-        io.grpc.stub.StreamObserver<org.DS.garyproject.SmartBuildingGRPC.valueResponse> responseObserver) {
+    public void changeCamera(org.DS.garyproject.SmartBuildingGRPC.stringRequest request,
+        io.grpc.stub.StreamObserver<org.DS.garyproject.SmartBuildingGRPC.stringResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getChangeCameraMethod(), responseObserver);
     }
 
@@ -262,8 +262,8 @@ public final class SecuritycameraServiceGrpc {
             getChangeCameraMethod(),
             asyncServerStreamingCall(
               new MethodHandlers<
-                org.DS.garyproject.SmartBuildingGRPC.valueRequest,
-                org.DS.garyproject.SmartBuildingGRPC.valueResponse>(
+                org.DS.garyproject.SmartBuildingGRPC.stringRequest,
+                org.DS.garyproject.SmartBuildingGRPC.stringResponse>(
                   this, METHODID_CHANGE_CAMERA)))
           .addMethod(
             getChangeVolumeMethod(),
@@ -318,8 +318,8 @@ public final class SecuritycameraServiceGrpc {
 
     /**
      */
-    public void changeCamera(org.DS.garyproject.SmartBuildingGRPC.valueRequest request,
-        io.grpc.stub.StreamObserver<org.DS.garyproject.SmartBuildingGRPC.valueResponse> responseObserver) {
+    public void changeCamera(org.DS.garyproject.SmartBuildingGRPC.stringRequest request,
+        io.grpc.stub.StreamObserver<org.DS.garyproject.SmartBuildingGRPC.stringResponse> responseObserver) {
       asyncServerStreamingCall(
           getChannel().newCall(getChangeCameraMethod(), getCallOptions()), request, responseObserver);
     }
@@ -376,8 +376,8 @@ public final class SecuritycameraServiceGrpc {
 
     /**
      */
-    public java.util.Iterator<org.DS.garyproject.SmartBuildingGRPC.valueResponse> changeCamera(
-        org.DS.garyproject.SmartBuildingGRPC.valueRequest request) {
+    public java.util.Iterator<org.DS.garyproject.SmartBuildingGRPC.stringResponse> changeCamera(
+        org.DS.garyproject.SmartBuildingGRPC.stringRequest request) {
       return blockingServerStreamingCall(
           getChannel(), getChangeCameraMethod(), getCallOptions(), request);
     }
@@ -476,8 +476,8 @@ public final class SecuritycameraServiceGrpc {
               (io.grpc.stub.StreamObserver<org.DS.garyproject.SmartBuildingGRPC.cameraResponse>) responseObserver);
           break;
         case METHODID_CHANGE_CAMERA:
-          serviceImpl.changeCamera((org.DS.garyproject.SmartBuildingGRPC.valueRequest) request,
-              (io.grpc.stub.StreamObserver<org.DS.garyproject.SmartBuildingGRPC.valueResponse>) responseObserver);
+          serviceImpl.changeCamera((org.DS.garyproject.SmartBuildingGRPC.stringRequest) request,
+              (io.grpc.stub.StreamObserver<org.DS.garyproject.SmartBuildingGRPC.stringResponse>) responseObserver);
           break;
         case METHODID_CHANGE_VOLUME:
           serviceImpl.changeVolume((org.DS.garyproject.SmartBuildingGRPC.valueRequest) request,

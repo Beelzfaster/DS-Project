@@ -25,8 +25,6 @@ import GRPC.ProjectorServer;
 import Models.Light;
 import Models.Heating;
 import Models.Projector;
-import SmartBuildingGRPC.SecuritycameraServiceGrpc;
-import SmartBuildingGRPC.SecuritycameraServiceGrpc.SecuritycameraServiceBlockingStub;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import io.grpc.StatusRuntimeException;
@@ -38,6 +36,7 @@ import jmDNS.Registering;
 
 import javax.jmdns.JmDNS;
 import javax.jmdns.ServiceInfo;
+import javax.swing.AbstractButton;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JToggleButton;
 import java.awt.Color;
@@ -112,12 +111,12 @@ public class Main {
 	public Main() throws InterruptedException, IOException {
 		initialize();
 		Registering r = new Registering();
-		//Start Device Registry, GRPC servers and channels then unregister
+		//Start Appliance Registry, GRPC servers and channels then unregister
 		r.jmndsRegister(heatingPort, projectorPort, lightPort, camPort);
 		startGRPCServers();
 		channels();
 		r.unRegister();
-		//loadInitialDevices();
+		loadInitialAppliances();
 	}
 	
 	public void startGRPCServers() throws IOException, InterruptedException {
@@ -126,12 +125,12 @@ public class Main {
 		HeatingServer.startDiscovery();
 
 	}
-	/*public void loadInitialDevices() throws IOException, InterruptedException {
+	public void loadInitialAppliances() throws IOException, InterruptedException {
 		initialHeating();
 		initialProjector();
 		initialLight();
-		initialCam();
-	}*/
+		initialCamera();
+	}
 	
 	public void channels() {
 		
@@ -154,12 +153,14 @@ public class Main {
 		heating_futureStub = HeatingServiceGrpc.newFutureStub(heatingChannel);
 		
 		securitycamera_blockingStub = SecuritycameraServiceGrpc.newBlockingStub(camChannel);
+		securitycamera_asyncStub = SecuritycameraServiceGrpc.newStub(camChannel);
+		securitycamera_futureStub = SecuritycameraServiceGrpc.newFutureStub(camChannel);
 
 	}
 	
 	private void initialize() {
 		frame = new JFrame();
-		frame.getContentPane().setBackground(Color.WHITE);
+		frame.getContentPane().setBackground(Color.PINK);
 		frame.setBounds(100, 100, 468, 525);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
@@ -233,7 +234,7 @@ public class Main {
 		frame.getContentPane().add(lblBrigtness);
 		
 		//////////////////////
-		//TV Volume Buttons
+		//Projector Volume Buttons
 		//////////////////////
 		JButton projector_volumeUp_btn = new JButton("+");
 		projector_volumeUp_btn.setFont(new Font("Tahoma", Font.BOLD, 5));
@@ -590,20 +591,19 @@ public class Main {
 			}
 		});
 		
-		/*String[] camNames = { "Select a Camera", "Office", "Garage", "Stairs", "Elevator", "Roof",
-				"Entrance" };
-		JComboBox camList = new JComboBox(camNames);
-		camList.setFont(new Font("Tahoma", Font.PLAIN, 10));
-		camList.setBounds(345, 194, 86, 20);
-		frame.getContentPane().add(camList);
-		camList.addActionListener(new ActionListener() {
-
-			public void actionPerformed(ActionEvent e) {
-				JComboBox cb = (JComboBox) e.getSource();
-				String camName = (String) cb.getSelectedItem();
-				changeCamera(camName);
-			}
-		});*/
+		String[] appNames = {"Select a Camera","Offices", "Garage", "Entrance", "Exit", "Roof", "Stairs" };
+		JComboBox appList = new JComboBox(appNames);
+		appList.setFont(new Font("Tahoma", Font.PLAIN, 10));
+		appList.setBounds(345, 194, 86, 20);
+		frame.getContentPane().add(appList);
+		appList.addActionListener(new ActionListener()  {
+			
+		    public void actionPerformed(ActionEvent e) {
+		        JComboBox cb = (JComboBox)e.getSource();
+		        String appName = (String)cb.getSelectedItem();
+		        changeCamera(appName);	
+}		
+	});
 		
 		JLabel lblApplianceStatus_1 = new JLabel("Appliance Status");
 		lblApplianceStatus_1.setBounds(170, 90, 83, 14);
@@ -705,7 +705,6 @@ public class Main {
 	
 				@Override
 				public void onError(Throwable t) {
-					// TODO Auto-generln("TV response "+response.getText());
 					System.out.println("Error with name connection for projector ");
 				}
 	
@@ -740,11 +739,11 @@ public class Main {
 	        lightInfo_name.setText("Name: "+response.getText());
 
 		}
-		/*else if(appliance.equals("Securitycamera")) {
+		else if(appliance.equals("Securitycamera")) {
 			stringResponse response = securitycamera_blockingStub.changeApplianceName(req);
-			System.out.println("cc Response "+response.getText());
+			System.out.println("Camera Response "+response.getText());
 	        camInfo_name.setText("Name: "+response.getText());
-		}*/
+		}
 		
 				
 	}
@@ -778,12 +777,10 @@ public class Main {
 				
 				
 			};
-			//Handle device to work with
+			//Handle appliance to work with
 
 			 projector_asyncStub.changeVolume(req, response);			
-				System.out.println("TV response "+req.getLength());
-				//String vol = String.valueOf(response.getLength());
-		        //tvInfo_volume.setText(vol);
+				System.out.println("Projector response "+req.getLength());
 
 		}else if(appliance.equals("Securitycamera")) {
 			StreamObserver<valueResponse> response = new StreamObserver<valueResponse>() {
@@ -810,7 +807,7 @@ public class Main {
 				
 			};
 				securitycamera_asyncStub.changeVolume(req, response);
-				System.out.println("Speaker Response"+req.getLength());
+				System.out.println("Camera Response"+req.getLength());
 		}
 
 	}
@@ -859,7 +856,7 @@ public class Main {
 			return;
 		}
 		
-		System.out.println("TV channel response"+((DocumentEvent) response).getLength());
+		System.out.println("Projector channel response"+((DocumentEvent) response).getLength());
 		String channel = String.valueOf(((DocumentEvent) response).getLength());
         projectorInfo_channel.setText("Channel No: "+channel);
 
@@ -894,16 +891,16 @@ public class Main {
 				
 				
 			};
-			//Handle device to work with
+			//Handle appliance to work with
 
 			heating_asyncStub.changeTemperature(req, response);			
 			System.out.println("Channel response "+req.getLength());
 
 	}
 
-	/*public void changeCamera(String camera) {
+	public void changeCamera(String camera) {
 		stringRequest req = stringRequest.newBuilder().setText(camera).build();
-		System.out.println("Changing camera");
+		System.out.println("Changing application to "+ req.getText());
 
 			StreamObserver<stringResponse> response = new StreamObserver<stringResponse>() {
 				
@@ -924,35 +921,35 @@ public class Main {
 				@Override
 				public void onCompleted() {
 					// TODO Auto-generated method stub
-					System.out.println("Completed changing speed");
+					System.out.println("Completed changing camera");
 				}
 				
 				
 			};
-			//Handle device to work with
+			//Handle appliance to work with
 
 			securitycamera_asyncStub.changeCamera(req, response);			
 			System.out.println("Channel response "+req.getText());
 
-	}*/
+	}
 	
 	
-	/*public void changeCamera(String appName) {
-		stringRequest req = stringRequest.newBuilder().setText(appName).build();
+	/*public void changeCamera(String camera) {
+		stringRequest req = stringRequest.newBuilder().setText(camera).build();
 		System.out.println("Changing application to "+ req.getText());
 		stringResponse response;
 		
 		
 		//Error Handling
 		try {
-			 response =securitycamera_blockingStub.changeCamera(req);
+			 response = securitycamera_blockingStub.changeCamera(req);
 
 		}catch(StatusRuntimeException e) {
 			System.out.println("RPC failed: {0}"+ e.getStatus());
 			return;
 		}
-		System.out.println("CC app response"+response.getText());
-		String cam = String.valueOf(response.getText());
+		System.out.println("Camera response"+(response).getText());
+		String cam = String.valueOf((response).getText());
         camInfo_camera.setText("Cam: "+cam);
 
 	}*/
@@ -985,7 +982,7 @@ public class Main {
 				
 				
 			};
-			//Handle device to work with
+			//Handle appliance to work with
 
 			heating_asyncStub.changeSpeed(req, response);			
 			System.out.println("Speed response "+req.getLength());
@@ -996,8 +993,7 @@ public class Main {
 		booleanRequest req = booleanRequest.newBuilder().setMsg(onOff).build();
 		System.out.println("On Off");
 
-
-	//Handle device to work with
+	//Handle appliance to work with
 		if(appliance.equals("Projector")) {
 			booleanResponse response;
 			//Error Handling
@@ -1008,18 +1004,16 @@ public class Main {
 				System.out.println("RPC failed: {0}"+ e.getStatus());
 				return;
 			}
-
-			
-			
-			
-				System.out.println("Projector response"+response.getMsg());
+		
+			System.out.println("Projector response "+response.getMsg());
 			Boolean status=	response.getMsg();
 			if(status) {
 				projectorInfo_status.setText("Status: On");
 			}else {
 				projectorInfo_status.setText("Status: Off");
 			}
-		}else if(appliance.equals("Heating")) {
+		}
+		else if(appliance.equals("Heating")) {
 			booleanResponse response;
 			//Error Handling
 			try {
@@ -1029,14 +1023,15 @@ public class Main {
 				System.out.println("RPC failed: {0}"+ e.getStatus());
 				return;
 			}
-				System.out.println("Speaker Response"+response.getMsg());
+				System.out.println("Heating Response "+response.getMsg());
 				Boolean status=	response.getMsg();
 				if(status) {
 					heatingInfo_status.setText("Status: On");
 				}else {
 					heatingInfo_status.setText("Status: Off");
 				}
-		}else if(appliance.equals("Securitycamera")) {
+		}
+		else if(appliance.equals("Securitycamera")) {
 			System.out.println("SecurityCamera Response ");
 
 			booleanResponse response;
@@ -1049,15 +1044,16 @@ public class Main {
 				return;
 			}
 			
-			System.out.println("Cam Response"+response.getMsg());
+			System.out.println("Cam Response "+response.getMsg());
 			Boolean status=	response.getMsg();
 			if(status) {
 				camInfo_status.setText("Status: On");
 			}else {
 				camInfo_status.setText("Status: Off");
 			}
-		}else if(appliance.equals("Light")) {
-			booleanResponse response ;
+		}
+		else if(appliance.equals("Light")) {
+			booleanResponse response;
 			
 			//Error Handling
 			try {
@@ -1068,9 +1064,7 @@ public class Main {
 				return;
 			}
 			
-			
-			
-			System.out.println("Light Response"+response.getMsg());
+			System.out.println("Light Response "+response.getMsg());
 			Boolean status=	response.getMsg();
 			if(status) {
 				lightInfo_status.setText("Status: On");
@@ -1101,7 +1095,7 @@ public class Main {
 	
 	public void initialProjector() {
 		Empty req = Empty.newBuilder().build();
-		System.out.println("Initial TV");
+		System.out.println("Initial Projector");
 		projectorResponse response;
 		
 		//Error Handling
@@ -1124,7 +1118,7 @@ public class Main {
 	
 	public void initialLight() {
 		Empty req = Empty.newBuilder().build();
-		System.out.println("Initial Lamp");
+		System.out.println("Initial Light");
 		lightResponse response;
 		//Error Handling
 		try {
@@ -1142,9 +1136,9 @@ public class Main {
 
 	}
 	
-	public void initialCc() {
+	public void initialCamera() {
 		Empty req = Empty.newBuilder().build();
-		System.out.println("Initial Chromecast");
+		System.out.println("Initial Camera");
 		cameraResponse response;
 		
 		//Error Handling

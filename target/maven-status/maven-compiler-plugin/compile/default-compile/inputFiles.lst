@@ -2,7 +2,6 @@ C:\Users\Beelz\Desktop\DS-Project\src\main\java\org\DS\garyproject\SmartBuilding
 C:\Users\Beelz\Desktop\DS-Project\src\main\java\org\DS\garyproject\SmartBuildingGRPC\valueRequest.java
 C:\Users\Beelz\Desktop\DS-Project\src\main\java\org\DS\garyproject\SmartBuildingGRPC\booleanResponseOrBuilder.java
 C:\Users\Beelz\Desktop\DS-Project\src\main\java\org\DS\garyproject\SmartBuildingGRPC\SecuritycameraServiceImpl.java
-C:\Users\Beelz\Desktop\DS-Project\src\main\java\SmartBuildingGRPC\Securitycamera.java
 C:\Users\Beelz\Desktop\DS-Project\src\main\java\org\DS\garyproject\SmartBuildingGRPC\stringResponseOrBuilder.java
 C:\Users\Beelz\Desktop\DS-Project\src\main\java\org\DS\garyproject\SmartBuildingGRPC\HeatingServiceImpl.java
 C:\Users\Beelz\Desktop\DS-Project\src\main\java\GUI\Main.java
@@ -16,6 +15,7 @@ C:\Users\Beelz\Desktop\DS-Project\src\main\java\org\DS\garyproject\SmartBuilding
 C:\Users\Beelz\Desktop\DS-Project\src\main\java\jmDNS\Discovering.java
 C:\Users\Beelz\Desktop\DS-Project\src\main\java\Models\Projector.java
 C:\Users\Beelz\Desktop\DS-Project\src\main\java\org\DS\garyproject\SmartBuildingGRPC\LightServiceGrpc.java
+C:\Users\Beelz\Desktop\DS-Project\src\main\java\org\DS\garyproject\SmartBuildingGRPC\Securitycamera.java
 C:\Users\Beelz\Desktop\DS-Project\src\main\java\org\DS\garyproject\SmartBuildingGRPC\valueRequestOrBuilder.java
 C:\Users\Beelz\Desktop\DS-Project\src\main\java\Models\Light.java
 C:\Users\Beelz\Desktop\DS-Project\src\main\java\com\google\protobuf\DescriptorProtos.java
@@ -30,7 +30,6 @@ C:\Users\Beelz\Desktop\DS-Project\src\main\java\org\DS\garyproject\SmartBuilding
 C:\Users\Beelz\Desktop\DS-Project\src\main\java\org\DS\garyproject\SmartBuildingGRPC\heatingResponse.java
 C:\Users\Beelz\Desktop\DS-Project\src\main\java\js\Json.java
 C:\Users\Beelz\Desktop\DS-Project\src\main\java\org\DS\garyproject\SmartBuildingGRPC\cameraResponseOrBuilder.java
-C:\Users\Beelz\Desktop\DS-Project\src\main\java\SmartBuildingGRPC\SecuritycameraServiceGrpc.java
 C:\Users\Beelz\Desktop\DS-Project\src\main\java\Models\Heating.java
 C:\Users\Beelz\Desktop\DS-Project\src\main\java\org\DS\garyproject\SmartBuildingGRPC\lightResponse.java
 C:\Users\Beelz\Desktop\DS-Project\src\main\java\org\DS\garyproject\SmartBuildingGRPC\ProjectorServiceImpl.java

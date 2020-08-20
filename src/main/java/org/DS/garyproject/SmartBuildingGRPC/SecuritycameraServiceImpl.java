@@ -71,20 +71,20 @@ public final class SecuritycameraServiceImpl {
       "th\030\003 \001(\005\"\037\n\rvalueResponse\022\016\n\006length\030\003 \001(" +
       "\005\"L\n\016cameraResponse\022\r\n\005aname\030\004 \001(\t\022\016\n\006st" +
       "atus\030\005 \001(\t\022\013\n\003cam\030\006 \001(\t\022\016\n\006volume\030\007 \001(\0052" +
-      "\310\003\n\025SecuritycameraService\022Q\n\020initialAppl" +
+      "\312\003\n\025SecuritycameraService\022Q\n\020initialAppl" +
       "iance\022\030.SmartBuildingGRPC.Empty\032!.SmartB" +
-      "uildingGRPC.cameraResponse\"\000\022U\n\014changeCa" +
-      "mera\022\037.SmartBuildingGRPC.valueRequest\032 ." +
-      "SmartBuildingGRPC.valueResponse\"\0000\001\022U\n\014c" +
-      "hangeVolume\022\037.SmartBuildingGRPC.valueReq" +
-      "uest\032 .SmartBuildingGRPC.valueResponse\"\000" +
-      "0\001\022P\n\005onOff\022!.SmartBuildingGRPC.booleanR" +
-      "equest\032\".SmartBuildingGRPC.booleanRespon" +
-      "se\"\000\022\\\n\023changeApplianceName\022 .SmartBuild" +
-      "ingGRPC.stringRequest\032!.SmartBuildingGRP" +
-      "C.stringResponse\"\000BC\n$org.DS.garyproject" +
-      ".SmartBuildingGRPCB\031SecuritycameraServic" +
-      "eImplP\001b\006proto3"
+      "uildingGRPC.cameraResponse\"\000\022W\n\014changeCa" +
+      "mera\022 .SmartBuildingGRPC.stringRequest\032!" +
+      ".SmartBuildingGRPC.stringResponse\"\0000\001\022U\n" +
+      "\014changeVolume\022\037.SmartBuildingGRPC.valueR" +
+      "equest\032 .SmartBuildingGRPC.valueResponse" +
+      "\"\0000\001\022P\n\005onOff\022!.SmartBuildingGRPC.boolea" +
+      "nRequest\032\".SmartBuildingGRPC.booleanResp" +
+      "onse\"\000\022\\\n\023changeApplianceName\022 .SmartBui" +
+      "ldingGRPC.stringRequest\032!.SmartBuildingG" +
+      "RPC.stringResponse\"\000BC\n$org.DS.garyproje" +
+      "ct.SmartBuildingGRPCB\031SecuritycameraServ" +
+      "iceImplP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

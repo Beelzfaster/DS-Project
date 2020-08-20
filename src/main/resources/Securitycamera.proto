@@ -9,7 +9,7 @@ package SmartBuildingGRPC;
 service SecuritycameraService{
   rpc initialAppliance(Empty) returns (cameraResponse) {}
   
-  rpc changeCamera(valueRequest) returns (stream valueResponse) {}
+  rpc changeCamera(stringRequest) returns (stream stringResponse) {}
   
   rpc changeVolume(valueRequest) returns (stream valueResponse) {}
   
