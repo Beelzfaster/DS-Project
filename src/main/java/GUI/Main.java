@@ -129,7 +129,6 @@ public class Main {
 		initialHeating();
 		initialProjector();
 		initialLight();
-		initialCamera();
 	}
 	
 	public void channels() {
